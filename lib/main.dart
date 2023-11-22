@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/controller/home_controller.dart';
 import 'package:getx/view/page_one_view.dart';
 import 'package:getx/view/page_three_view.dart';
 import 'package:getx/view/page_two_view.dart';
