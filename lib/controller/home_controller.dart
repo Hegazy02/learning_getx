@@ -11,4 +11,22 @@ class HomeController extends GetxController {
   increaseSume() {
     sum++;
   }
+
+  @override
+  void onInit() {
+    print("fetch data");
+    super.onInit();
+  }
+
+  @override
+  void onReady() {
+    print("ready");
+    super.onReady();
+  }
+
+  @override
+  void onClose() {
+    print("close data");
+    super.onClose();
+  }
 }

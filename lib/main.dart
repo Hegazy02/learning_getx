@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/utils/my_bindings.dart';
+import 'package:getx/view/page_five_view.dart';
+import 'package:getx/view/page_four_view.dart';
 import 'package:getx/view/page_one_view.dart';
+import 'package:getx/view/page_seven_view.dart';
+import 'package:getx/view/page_six_view.dart';
 import 'package:getx/view/page_three_view.dart';
 import 'package:getx/view/page_two_view.dart';
 
@@ -15,6 +20,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+      initialBinding: MyBindings(),
+      //لو هنستخدم البيندينجز هنحتاج نعمل فايند في الصفح الي هنستخدم فيها الكونترولر
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
@@ -62,6 +69,34 @@ class MyHomePage extends StatelessWidget {
             ElevatedButton(
                 onPressed: () => Get.to(() => PageThree()),
                 child: const Text("Page three")),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () => Get.to(() => PageFour()),
+                child: const Text("Page four")),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () => Get.to(() => PageFive()),
+                child: const Text("Page five")),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () => Get.to(() => PageSix()),
+                child: const Text("Page six")),
+            const SizedBox(
+              height: 20,
+            ),
+            //كدا انا مستخدم الكونترولر للصفحة السابعة بس
+            ElevatedButton(
+                onPressed: () => Get.to(
+                      () => PageSeven(),
+                      // binding: MyBindings()
+                    ),
+                child: const Text("Page seven")),
           ],
         ),
       ),
