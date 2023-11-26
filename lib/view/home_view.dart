@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/main.dart';
 import 'package:getx/view/login_view.dart';
+import 'package:getx/view/other_view.dart';
 import 'package:getx/view/page_five_view.dart';
 import 'package:getx/view/page_four_view.dart';
 import 'package:getx/view/page_one_view.dart';
@@ -9,6 +10,7 @@ import 'package:getx/view/page_seven_view.dart';
 import 'package:getx/view/page_six_view.dart';
 import 'package:getx/view/page_three_view.dart';
 import 'package:getx/view/page_two_view.dart';
+import 'package:getx/view/welcome_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -80,13 +82,33 @@ class HomeView extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  sharedPref!.remove('login');
+                  sharedPref.remove('login');
                   Get.offAll(
                     () => const LoginView(),
-                    // binding: MyBindings()
                   );
                 },
                 child: const Text("Logout")),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  sharedPref.remove('welcome');
+                  Get.offAll(
+                    () => const WelcomeView(),
+                  );
+                },
+                child: const Text("Welcome")),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Get.offAll(
+                    () => const OtherView(),
+                  );
+                },
+                child: const Text("other view")),
           ],
         ),
       ),

@@ -8,6 +8,7 @@ class PageFour extends StatelessWidget {
   //عملت حقن للكنترولر
   HomeController controller = Get.put(HomeController(), permanent: true);
   //لما بستخدم البرمينانت كدا الداتا هتفضل في الكنترولر مش هتتمسح لما اطلع من السكرين
+  //بس البيانات هتتصفر هنا لو مستخدم انشيال بيندينج في الجيت ماتريال عشان دا في الصفحة دي انا بعمل انستانس جديد حتى لو عامل برميننت بترو
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +22,7 @@ class PageFour extends StatelessWidget {
           children: [
             GetBuilder<HomeController>(
               // init: HomeController(),
-              //لما بعمل حقن كدا انا عرفت الكنترولر خلاص ومش محتاج اعرفو في ال ان اي تاني
+              //لما بعمل حقن كدا انا عرفت الكنترولر خلاص ومش محتاج اعرفو في ال ان ايت تاني
               builder: (controller) => Text(
                 "${controller.number}",
                 style:

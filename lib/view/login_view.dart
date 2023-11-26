@@ -15,7 +15,7 @@ class LoginView extends StatelessWidget {
         body: Center(
           child: ElevatedButton(
               onPressed: () {
-                sharedPref!.setBool('login', true);
+                sharedPref.setBool('login', true);
                 Get.offAll(() => const HomeView());
               },
               child: const Text("Login")),
