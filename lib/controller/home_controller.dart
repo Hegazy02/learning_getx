@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 class HomeController extends GetxController {
   int number = 0;
   RxInt sum = 0.obs;
+  var arg;
   increament() {
     number++;
     update();
@@ -14,7 +15,12 @@ class HomeController extends GetxController {
 
   @override
   void onInit() {
+    //الفنشكن دي اول فنكشن بتشتغل عند تعريف الكونترولر
+    //التعريف ممكن يكون من خلال بوت او لازي بوت
     print("fetch data");
+    arg = Get.arguments;
+    print("argggg  $arg");
+
     super.onInit();
   }
 

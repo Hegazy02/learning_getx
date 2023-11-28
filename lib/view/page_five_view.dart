@@ -31,10 +31,14 @@ class PageFive extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             GetBuilder<HomeController>(
-              builder: (controller) => Text(
-                "${controller.number}",
-                style:
-                    const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              builder: (controller) => Column(
+                children: [
+                  Text(
+                    "${controller.number}",
+                    style: const TextStyle(
+                        fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
             ),
           ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/controller/home_controller.dart';
+import 'package:getx/view/page_five_view.dart';
 
 class PageFour extends StatelessWidget {
   PageFour({super.key});
@@ -34,7 +35,10 @@ class PageFour extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () => controller.increament(),
-                child: const Text("increase"))
+                child: const Text("increase")),
+            ElevatedButton(
+                onPressed: () => Get.to(PageFive(), arguments: "xxxxxxxx"),
+                child: const Text("page five"))
           ],
         ),
       ),
