@@ -31,6 +31,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       translations: MyLocal(),
       locale: LocaleController.localeLang,
+      fallbackLocale: Locale('en'),
+      //الفول باك دي عشان لو حصل ايرور في عملية الترجمه يخلي الاستاندارد لغه انجليزي
       initialBinding: MyBindings(),
       //لو هنستخدم البيندينجز هنحتاج نعمل فايند في الصفح الي هنستخدم فيها الكونترولر
       debugShowCheckedModeBanner: false,

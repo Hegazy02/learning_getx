@@ -31,6 +31,7 @@ class LocaleController extends GetxController {
       sharedPref.setBool("isDark", true);
       isDark = true;
     }
+    update();
     print("isDark $isDark");
   }
 
