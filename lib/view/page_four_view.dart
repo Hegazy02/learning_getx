@@ -10,6 +10,8 @@ class PageFour extends StatelessWidget {
   HomeController controller = Get.put(HomeController(), permanent: true);
   //لما بستخدم البرمينانت كدا الداتا هتفضل في الكنترولر مش هتتمسح لما اطلع من السكرين
   //بس البيانات هتتصفر هنا لو مستخدم انشيال بيندينج في الجيت ماتريال عشان دا في الصفحة دي انا بعمل انستانس جديد حتى لو عامل برميننت بترو
+  //لما اروح من الصفحة اربعه الي صفحه خمسه البيانات هتكون معايا عشان الكونترولر مش هيتعملو ديليت مدام انا مشلتش صفحة اربعه من الستاك
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

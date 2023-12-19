@@ -6,6 +6,7 @@ class PageSix extends StatelessWidget {
   PageSix({super.key});
   final HomeController controller = Get.find<HomeController>();
   //هنا بقولو دور على لازي بوت متعرفه قبل كدا ومن خلالها اعمل تعريف للكنترولور
+  //الفايند بتستخدم مع اللازي بوت فقط
 
   @override
   Widget build(BuildContext context) {
